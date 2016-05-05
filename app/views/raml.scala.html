@@ -1,0 +1,17 @@
+@(webJarAssets: WebJarAssets)
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Play RAML API-Console</title>
+    <link rel='stylesheet' href='@routes.WebJarAssets.at(webJarAssets.locate("api-console-light-theme.css"))'>
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+
+    <script src="@routes.WebJarAssets.at(webJarAssets.locate("api-console-vendor.min.js"))"></script>
+    <script src="@routes.WebJarAssets.at(webJarAssets.locate("api-console.min.js"))"></script>
+
+</head>
+
+<body ng-app="ramlConsoleApp" ng-cloak>
+    <raml-console src="@routes.Assets.versioned("raml/amazonS3-Bucket.raml")"></raml-console>
+</body>
+</html>
